@@ -4,11 +4,27 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="border-t border-[var(--color-line)]">
-  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 sm:flex-row sm:px-8">
-    <p class="font-mono text-xs text-[var(--color-fog)]">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-5 py-8 sm:flex-row sm:px-8">
+    <p class="order-2 font-mono text-xs text-[var(--color-fog)] sm:order-1">
       © {year} {profile.name} · Oujda, Morocco 🇲🇦
     </p>
-    <p class="font-mono text-xs text-[var(--color-fog)]">
+
+    <div class="order-1 flex items-center gap-1 sm:order-2">
+      <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" class="grid h-9 w-9 place-items-center rounded-lg text-[var(--color-fog)] transition-colors hover:bg-[var(--color-surface-2)] hover:text-[var(--color-snow)]">
+        <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+      </a>
+      <a href={profile.twitter} target="_blank" rel="noreferrer" aria-label="X (Twitter)" class="grid h-9 w-9 place-items-center rounded-lg text-[var(--color-fog)] transition-colors hover:bg-[var(--color-surface-2)] hover:text-[var(--color-snow)]">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+      </a>
+      <a href={profile.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" class="grid h-9 w-9 place-items-center rounded-lg text-[var(--color-fog)] transition-colors hover:bg-[var(--color-surface-2)] hover:text-[var(--color-snow)]">
+        <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href={`mailto:${profile.email}`} aria-label="Email" class="grid h-9 w-9 place-items-center rounded-lg text-[var(--color-fog)] transition-colors hover:bg-[var(--color-surface-2)] hover:text-[var(--color-snow)]">
+        <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <p class="order-3 font-mono text-xs text-[var(--color-fog)]">
       Built with <span class="text-[var(--color-cyan)]">Astro</span> +
       <span class="text-[var(--color-emerald)]">Tailwind</span>
     </p>

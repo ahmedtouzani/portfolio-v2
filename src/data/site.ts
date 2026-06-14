@@ -15,6 +15,8 @@ export const profile = {
     'Systems architect and full-stack developer shipping production software end to end — from React/Next.js front ends to Python & Node back ends. My focus is the new wave of AI: LLM-powered products, autonomous agents that act on their own, and the agentic engineering that makes them reliable.',
   email: 'sofyaneahmed333@gmail.com',
   github: 'https://github.com/ahmedtouzani',
+  twitter: 'https://x.com/mrah48',
+  instagram: 'https://instagram.com/ah_4__8',
   huggingface: 'https://huggingface.co/ahmedtouzani39',
   resumeNote: 'Open to AI engineering, agentic systems & full-stack roles.',
 };
