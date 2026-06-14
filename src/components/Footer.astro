@@ -1,0 +1,16 @@
+---
+import { profile } from '../data/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-[var(--color-line)]">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 sm:flex-row sm:px-8">
+    <p class="font-mono text-xs text-[var(--color-fog)]">
+      © {year} {profile.name} · Oujda, Morocco 🇲🇦
+    </p>
+    <p class="font-mono text-xs text-[var(--color-fog)]">
+      Built with <span class="text-[var(--color-cyan)]">Astro</span> +
+      <span class="text-[var(--color-emerald)]">Tailwind</span>
+    </p>
+  </div>
+</footer>

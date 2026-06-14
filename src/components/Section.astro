@@ -1,0 +1,25 @@
+---
+interface Props {
+  id: string;
+  index: string;
+  label: string;
+  title: string;
+  blurb?: string;
+}
+const { id, index, label, title, blurb } = Astro.props;
+---
+
+<section id={id} class="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-20 sm:px-8 sm:py-28">
+  <div class="mb-12 max-w-2xl" data-reveal>
+    <div class="mb-3 flex items-center gap-3">
+      <span class="font-mono text-sm text-[var(--color-cyan)]">{index}</span>
+      <span class="h-px w-8 bg-[var(--color-line)]"></span>
+      <span class="label">{label}</span>
+    </div>
+    <h2 class="font-display text-3xl font-bold tracking-tight text-[var(--color-snow)] sm:text-4xl">
+      {title}
+    </h2>
+    {blurb && <p class="mt-4 text-lg leading-relaxed text-[var(--color-fog)]">{blurb}</p>}
+  </div>
+  <slot />
+</section>

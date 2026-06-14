@@ -1,0 +1,53 @@
+---
+import Section from './Section.astro';
+import { profile } from '../data/site';
+---
+
+<Section id="about" index="01" label="About" title="Engineer for the AI-native era">
+  <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
+    <div class="space-y-5 text-lg leading-relaxed text-[var(--color-mist)]" data-reveal>
+      <p>{profile.intro}</p>
+      <p class="text-[var(--color-fog)]">
+        I care about systems that hold up under real use: server-authoritative architectures, tested backends,
+        and autonomy you can actually trust. Whether it&rsquo;s an LLM product behind Stripe billing or an engine
+        that hunts opportunities on its own, the goal is the same — software that does meaningful work without
+        being babysat.
+      </p>
+    </div>
+
+    <aside class="card hairline rounded-2xl bg-[var(--color-surface)]/50 p-6" data-reveal>
+      <div class="flex items-center gap-4">
+        <img
+          src={profile.avatar}
+          alt={profile.name}
+          width="56"
+          height="56"
+          loading="lazy"
+          class="h-14 w-14 rounded-xl border border-[var(--color-line)]"
+        />
+        <div>
+          <div class="font-display font-semibold text-[var(--color-snow)]">{profile.name}</div>
+          <div class="text-sm text-[var(--color-fog)]">@{profile.handle}</div>
+        </div>
+      </div>
+      <dl class="mt-6 space-y-3 text-sm">
+        <div class="flex justify-between gap-4">
+          <dt class="text-[var(--color-fog)]">Location</dt>
+          <dd class="text-[var(--color-mist)]">{profile.location}</dd>
+        </div>
+        <div class="flex justify-between gap-4">
+          <dt class="text-[var(--color-fog)]">Focus</dt>
+          <dd class="text-right text-[var(--color-mist)]">AI agents · Full-stack</dd>
+        </div>
+        <div class="flex justify-between gap-4">
+          <dt class="text-[var(--color-fog)]">Stack</dt>
+          <dd class="text-right text-[var(--color-mist)]">Python · TypeScript</dd>
+        </div>
+        <div class="flex justify-between gap-4">
+          <dt class="text-[var(--color-fog)]">Status</dt>
+          <dd class="text-right text-[var(--color-emerald)]">{profile.resumeNote}</dd>
+        </div>
+      </dl>
+    </aside>
+  </div>
+</Section>

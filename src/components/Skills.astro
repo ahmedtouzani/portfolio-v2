@@ -1,0 +1,41 @@
+---
+import Section from './Section.astro';
+import { skills } from '../data/site';
+
+const dot: Record<string, string> = {
+  cyan: 'var(--color-cyan)',
+  violet: 'var(--color-violet)',
+  emerald: 'var(--color-emerald)',
+  amber: 'var(--color-amber)',
+};
+---
+
+<Section
+  id="skills"
+  index="03"
+  label="Capabilities"
+  title="Skills & toolkit"
+  blurb="Full-stack range with depth where it counts — AI systems, real-time backends, and the infra that holds them up."
+>
+  <div class="grid gap-5 sm:grid-cols-2">
+    {
+      skills.map((group) => (
+        <div class="card hairline rounded-2xl bg-[var(--color-surface)]/40 p-6" data-reveal>
+          <div class="mb-4 flex items-center gap-2.5">
+            <span class="h-2.5 w-2.5 rounded-full" style={`background:${dot[group.accent]}`}></span>
+            <h3 class="font-display text-lg font-semibold text-[var(--color-snow)]">{group.title}</h3>
+          </div>
+          <ul class="flex flex-wrap gap-2">
+            {
+              group.items.map((item) => (
+                <li class="rounded-lg border border-[var(--color-line)] bg-[var(--color-ink-2)] px-3 py-1.5 text-sm text-[var(--color-mist)]">
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</Section>

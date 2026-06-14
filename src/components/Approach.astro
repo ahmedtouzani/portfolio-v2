@@ -1,0 +1,27 @@
+---
+import Section from './Section.astro';
+import { agentic } from '../data/site';
+---
+
+<Section
+  id="approach"
+  index="02"
+  label="The new AI era"
+  title="How I work with AI & agents"
+  blurb="The shift isn't chatbots — it's software that decides and acts. Here's how I build for it."
+>
+  <div class="grid gap-px overflow-hidden rounded-2xl border border-[var(--color-line)] bg-[var(--color-line)] sm:grid-cols-2">
+    {
+      agentic.map((a) => (
+        <div class="group relative bg-[var(--color-ink-2)] p-7 transition-colors hover:bg-[var(--color-surface)]/60" data-reveal>
+          <div class="flex items-baseline gap-4">
+            <span class="font-mono text-sm text-[var(--color-cyan)]">{a.n}</span>
+            <h3 class="font-display text-xl font-semibold text-[var(--color-snow)]">{a.title}</h3>
+          </div>
+          <p class="mt-3 pl-9 leading-relaxed text-[var(--color-fog)]">{a.body}</p>
+          <span class="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-[var(--color-cyan)] to-[var(--color-emerald)] transition-all duration-500 group-hover:w-full"></span>
+        </div>
+      ))
+    }
+  </div>
+</Section>

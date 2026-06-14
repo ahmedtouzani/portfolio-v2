@@ -1,0 +1,18 @@
+{
+  "name": "ahmed-touzani-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Portfolio of Ahmed Touzani — Systems Architect & Full-Stack Developer building for the age of AI agents.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "astro": "^6.4.6",
+    "tailwindcss": "^4.1.0"
+  }
+}
