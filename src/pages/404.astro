@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="404 — Lost in the agent graph">
+  <main class="relative grid min-h-screen place-items-center overflow-hidden px-6">
+    <div class="aurora"></div>
+    <div class="absolute inset-0 zellige"></div>
+
+    <div class="relative text-center">
+      <p class="font-mono text-sm text-[var(--color-cyan)]">$ cd /this-page<span class="cursor-blink">_</span></p>
+      <h1 class="mt-4 font-display text-7xl font-bold gradient-text sm:text-9xl">404</h1>
+      <p class="mt-4 font-display text-xl text-[var(--color-snow)]">This route didn&rsquo;t resolve.</p>
+      <p class="mx-auto mt-2 max-w-md text-[var(--color-fog)]">
+        Even autonomous systems take a wrong turn sometimes. Let&rsquo;s get you back on the graph.
+      </p>
+      <a
+        href={base}
+        class="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[var(--color-cyan)] to-[var(--color-emerald)] px-5 py-3 font-medium text-[#04140f] transition-transform hover:scale-[1.02]"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back home
+      </a>
+    </div>
+  </main>
+</Layout>
